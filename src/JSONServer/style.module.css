@@ -1,0 +1,145 @@
+.container {
+    width: 700px;
+    height: 1000px;
+    counter-reset: li; 
+    list-style: none; 
+    font: 20px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 var(--text-shadow-color);
+}
+
+.container a {
+    position: relative; 
+    display: block;
+    padding: .4em .4em .4em 2em; 
+    margin: .5em 0;
+    background: var(--link-background); 
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+}
+
+.container a:hover {
+    background: var(--link-background);
+}
+
+.container a:hover:before {
+    transform: rotate(360deg);
+}
+
+.container a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: var(--circle-background);
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid var(--border-color);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+:root {
+    --text-shadow-color: rgba(255, 255, 255, 0.5);
+    --link-background: #DAD2CA;
+    --text-color: #444;
+    --circle-background: #8FD4C1;
+    --border-color: #ffffff;
+}
+
+body {
+    padding: 30px;
+}
+
+.containerServer {
+	width: 500px;
+	height: 500px;
+	border: 5px solid black;
+	border-radius: 20px;
+}
+
+.containerText {
+	margin-left: 45px;
+	margin-top: 10px;
+	width: 400px;
+	height: 40px;
+	font: 30px "Trebuchet MS", "Lucida Sans";
+	text-align: center;
+}
+
+.containerLi {
+	margin-left: 10px;
+	margin-top: 10px;
+	font: 20px "Trebuchet MS", "Lucida Sans";
+}
+
+.header {
+    text-align: center;
+    right: 120px;
+    font-size: 25px;
+}
+
+.displayInput {
+    margin-top: 20px;
+    margin-left: 100px;
+    border: 3px solid black;
+    background: #f9f8f7;
+    width: 500px;
+    height: 28px;
+    font-size: 20px;
+}
+
+.container button {
+    width: 150px;
+    height: 28px;
+    font-size: 17px;
+    margin: 11px;
+}
+
+.buttomSortRed {
+    border: 3px solid blue;
+    background: rgb(149, 141, 141);
+    border-radius: 20px;
+}
+
+.buttomSort {
+        
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border: 5px solid gray;
+     border-radius: 50%;
+    border-left-color: transparent;
+    animation: loader 1s infinite;
+}
+    
+@keyframes loader {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    } 
+}
+
+.searchInput {
+    margin-top: 5px;
+    margin-left: 15px;
+    width: 300px;
+    height: 25px;
+    border: 2px solid black;
+    font-size: 15px;
+}
