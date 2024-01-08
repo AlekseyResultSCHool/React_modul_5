@@ -67,7 +67,6 @@ export const JSONServer = () => {
 				<button disabled={isDeleting} onClick={requesDeleteTodo}>
 					Удалить дело
 				</button>
-				<useRequestGetTodo />
 				<button
 					onClick={clickSortTodo}
 					className={!sortTodos ? styles.buttomSort : styles.buttomSortRed}
